@@ -1,0 +1,9 @@
+package com.Question.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.Question.entity.Question;
+
+public interface QuestionRepository extends JpaRepository<Question, Integer> {
+
+}

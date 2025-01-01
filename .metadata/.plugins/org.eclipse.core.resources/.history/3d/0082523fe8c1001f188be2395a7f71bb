@@ -1,0 +1,5 @@
+package com.Question.entity;
+
+public class Question {
+
+}

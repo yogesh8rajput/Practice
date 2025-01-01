@@ -1,0 +1,5 @@
+package com.Question.Service;
+
+public class QuestionServiceImpl {
+
+}

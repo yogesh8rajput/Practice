@@ -1,0 +1,5 @@
+package com.Question.Repository;
+
+public class QuestionRepository {
+
+}

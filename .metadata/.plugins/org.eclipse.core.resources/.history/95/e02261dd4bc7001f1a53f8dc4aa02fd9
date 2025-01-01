@@ -1,0 +1,50 @@
+package com.Quiz.service;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Quiz.Repository.QuizRepository;
+import com.Quiz.entity.Quiz;
+
+@Service
+public class QuizServiceImpl implements QuizService {
+
+	
+	    private Questionclient questionclient;
+	    private	QuizRepository quizRepository;
+		
+	    @Autowired
+		 QuizServiceImpl(QuizRepository quizRepository,Questionclient questionclient)
+		{
+			this.quizRepository=quizRepository;
+			this.questionclient=questionclient;
+		}
+		
+	
+	
+	
+	@Override
+	public Quiz add(Quiz quiz) {
+		
+		return quizRepository.save(quiz);
+	}
+
+	@Override
+    public List<Quiz> get() {
+        return (List<Quiz>) quizRepository.findAll();
+    }
+	@Override
+	public Optional<Quiz> get(Long id) {
+		
+		return quizRepository.findById(id);
+	}
+
+	public void delete(Long id) {
+		 quizRepository.deleteById(id);
+	}
+	
+}

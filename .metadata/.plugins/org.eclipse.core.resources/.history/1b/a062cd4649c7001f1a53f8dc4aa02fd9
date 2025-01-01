@@ -1,0 +1,14 @@
+package com.Quiz.entity;
+
+import jakarta.persistence.Column;
+
+public class Question {
+
+	
+	@Column(name = "Questionid")
+	private Long id;
+	@Column(name = "Questio")
+	private String question;
+	
+	private Long quizid;
+}
